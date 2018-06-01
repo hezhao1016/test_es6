@@ -1,3 +1,4 @@
+'use strict';
 /**
  * JavaScript中有三种声明变量的方式：var、let、const 的区别。
   */
