@@ -28,20 +28,6 @@ var str = `<div>
 console.log(str);
 
 
-// ES6的新语法,解构
-console.log('-------------------解构--------------------');
-const { foo, bar } = { foo: "aaa", bar: "bbb" };
-const { PI } = Math;
-console.log(foo); // "aaa"
-console.log(bar); // "bbb"
-console.log(PI); // 3.141592653589793
-// 等价于：
-// var obj =  { foo: "aaa", bar: "bbb" };
-// const foo = obj.foo;
-// const bar = obj.bar;
-// const bar = Math.PI;
-
-
 console.log('------------------- == 与 === --------------------');
 // == 与 ===
 // ==  它会自动转换数据类型再比较，很多时候，会得到非常诡异的结果

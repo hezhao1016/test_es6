@@ -104,14 +104,14 @@ if (!Array.each) {
 
 /**
  * 传入一个函数，将依次作用在每个元素上
- * @param fun(x) 回调函数，接受一个参数
+ * @param fun(element, index, self) 回调函数，element表示值,index表示下标，self：当前数组
  * @returns {Array} 返回计算结果，一个数组
  */
 if (!Array.map) {
     Array.prototype.map = function (fun) {
         var o = [];
-        this.each(function (element, index) {
-            o[index] = fun(element);
+        this.each(function (element, index, self) {
+            o[index] = fun(element, index, self);
         });
         return o;
     };
@@ -119,7 +119,7 @@ if (!Array.map) {
 
 /**
  * 把一个函数作用在这个Array的每个元素上，reduce()把结果继续和序列的下一个元素做累积计算
- * @param fun(x, y) 回调函数，接受两个参数
+ * @param fun(previousValue, currentValue, currentIndex, self) 回调函数，previousValue表示上一个值，currentValue表示当前值,index表示当前下标，self：当前数组
  * @returns {*} 返回计算结果
  */
 if (!Array.reduce) {
@@ -128,7 +128,7 @@ if (!Array.reduce) {
         for (var i = 0, len = this.length; i < len; i++) {
             if (i <= len - 1) {
                 if (i <= len - 2) {
-                    result += fun(this[i], this[i + 1]);
+                    result += fun(this[i], this[i + 1], i, this);
                     i++;
                 } else {
                     result += this[i];
