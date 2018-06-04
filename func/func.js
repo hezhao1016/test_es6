@@ -88,3 +88,23 @@ function foo() {
     };
 }
 */
+
+
+// 默认参数
+console.log('--------------默认参数---------------');
+
+function log(x, y = 'World') {
+    console.log(x, y);
+}
+
+log('Hello'); // Hello World
+log('Hello', 'China'); // Hello China
+log('Hello', ''); // Hello
+
+
+// ES2017 允许函数的最后一个参数有尾逗号
+console.log('--------------尾逗号---------------');
+function test1(param1, param2,) {
+    console.log(param1, param2, );
+}
+test1('a', 'b', );

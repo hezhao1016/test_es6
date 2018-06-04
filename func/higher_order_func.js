@@ -5,7 +5,7 @@ var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 // 获取每个元素的二次方
 var newarr = arr.map(function (x) {
-    return x ** 2 ;
+    return x ** 2 ; // ES2016新特性：求幂运算符
 });
 console.log(newarr);
 

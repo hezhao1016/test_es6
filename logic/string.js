@@ -89,3 +89,18 @@ console.log('-----------------split-----------------');
 var str = '1,2,3,4,5';
 var arr = str.split(',');
 console.log(arr);
+
+
+// 字符串填充
+console.log('-----------------字符串填充-----------------');
+console.log("abc".padStart(6)); // "    abc"  未填写填充字符时候以空格填充
+console.log("abc".padStart(6,"3")); // "333abc"
+console.log("abc".padStart(6,"3").length); // 6
+console.log("abc".padStart(6,"123456")); // "123abc" 自动忽略句尾多余的填充字符
+console.log("abc".padStart(2,"123456")); // "abc" 原字符串大于要求的数据时候则不发生变化返回原字符串
+
+console.log("123".padEnd(8));             // "123     "
+console.log("123".padEnd(8,"c"));         // "123ccccc"
+console.log("123".padEnd(8,"c").length);  // 8
+console.log("123".padEnd(8,"123456"));    // "12312345"
+console.log("123".padEnd(2,"123456"));    // "123"

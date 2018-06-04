@@ -39,6 +39,12 @@ console.log(name, id);
 var {name, single=true} = person;
 console.log(name, single);
 
+// 有些时候，如果变量已经被声明了，再次赋值的时候，正确的写法也会报语法错误
+// 这是因为JavaScript引擎把{开头的语句当作了块处理，于是=不再合法。解决方法是用小括号括起来
+var name;
+({name, single=true} = person);
+console.log(name, single);
+
 
 // 注意，对数组元素进行解构赋值时，多个变量要用[...]括起来。
 console.log('---------------------------------------');
