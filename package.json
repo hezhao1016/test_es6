@@ -1,0 +1,22 @@
+{
+  "name": "test_es6",
+  "description": "学习JavaScript And ES6 的Demo项目",
+  "version": "0.0.1",
+  "author": {
+    "name": "Horace",
+    "email": "hezhao_java@163.com"
+  },
+  "keywords": [
+    "javascript",
+    "ES6"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/hezhao/test_es6"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "underscore": "^1.9.1"
+  }
+}

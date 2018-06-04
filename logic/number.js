@@ -69,3 +69,9 @@ console.log(Math.ceil(1.12));
 
 // 绝对值
 console.log(Math.abs(-1.12));
+
+// 最大值
+console.log(Math.max(5, 3, 10, 34, 7));
+
+// 最小值
+console.log(Math.min(5, 3, 10, 34, 7));

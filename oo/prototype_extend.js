@@ -5,7 +5,7 @@ function Student(props) {
 }
 
 Student.prototype.hello = function () {
-    alert('Hello, ' + this.name + '!');
+    console.log(`Hello, ${this.name}!`);
 };
 
 /*
@@ -65,6 +65,7 @@ name: '小明',
 });
 console.log(xiaoming.name); // '小明'
 console.log(xiaoming.grade); // 2
+xiaoming.hello();
 
 // 验证原型:
 console.log(xiaoming.__proto__ === PrimaryStudent.prototype); // true
@@ -73,6 +74,7 @@ console.log(xiaoming.__proto__.__proto__ === Student.prototype); // true
 // 验证继承关系:
 console.log(xiaoming instanceof PrimaryStudent); // true
 console.log(xiaoming instanceof Student); // true
+
 
 
 // 注意，函数F仅用于桥接，我们仅创建了一个new F()实例，而且，没有改变原有的Student定义的原型链。
@@ -106,8 +108,9 @@ var xiaohong = new OtherStudent({
     name: '小红',
     grade: 3
 });
-console.log(xiaohong.name); // '小明'
+console.log(xiaohong.name); // '小红'
 console.log(xiaohong.grade); // 2
+xiaohong.hello();
 
 // 验证原型:
 console.log(xiaohong.__proto__ === OtherStudent.prototype); // true

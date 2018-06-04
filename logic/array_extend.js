@@ -124,15 +124,16 @@ if (!Array.map) {
  */
 if (!Array.reduce) {
     Array.prototype.reduce = function (fun) {
-        var result = 0;
-        for (var i = 0, len = this.length; i < len; i++) {
-            if (i <= len - 1) {
-                if (i <= len - 2) {
-                    result += fun(this[i], this[i + 1], i, this);
-                    i++;
-                } else {
-                    result += this[i];
-                }
+        if(this.length == 0)    throw new TypeError("Reduce of empty array with no initial value");
+        if(this.length == 1)    return this[0];
+        if(this.length == 2)    return fun(this[0], this[1], 0, this);
+
+        var result;
+        for (var i = 0, len = this.length; i < len-1; i++) {
+            if(i == 0) {
+                result = fun(this[i], this[i + 1], i, this);
+            } else {
+                result = fun(result, this[i + 1], i, this);
             }
         }
         return result;
@@ -232,7 +233,7 @@ console.log(arr.remove(5));
 console.log(arr);
 
 // 测试each函数
-var arr = [1,2,3,4];
+var arr = [1, 2, 3, 4, 5];
 var str = "";
 arr.each(function (element, index){
     str += index + ":" + element + "\t";
