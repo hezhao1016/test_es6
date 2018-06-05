@@ -75,3 +75,7 @@ console.log(Math.max(5, 3, 10, 34, 7));
 
 // 最小值
 console.log(Math.min(5, 3, 10, 34, 7));
+
+// 计算x 的 y 次幂的值
+console.log(Math.pow(2, 3));
+console.log(Math.pow(-2, 3));

@@ -139,6 +139,15 @@ var arr = ['one', 'two', 'three'];
 arr.reverse();
 console.log(arr); // ['three', 'two', 'one']
 
+// 当集合的所有元素都满足条件时，every()函数返回true，当集合的至少一个元素满足条件时，some()函数返回true
+console.log('-----------------every/some-----------------');
+var num = [1, 4, 7, -3, -9];
+// 所有元素都大于0
+var result = num.every(x => x>0);
+console.log(result);
+// 至少一个元素大于0
+result = num.some(x => x>0);
+console.log(result);
 
 // 多维数组
 console.log('-----------------多维数组-----------------');
