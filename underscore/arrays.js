@@ -36,7 +36,7 @@ console.log('---------------------------zip/unzip------------------------------'
 
 var names = ['Adam', 'Lisa', 'Bart'];
 var scores = [85, 92, 59];
-var namesAndScores = _.zip(names, scores)
+var namesAndScores = _.zip(names, scores);
 console.log(namesAndScores); // [['Adam', 85], ['Lisa', 92], ['Bart', 59]]
 
 // var namesAndScores = [['Adam', 85], ['Lisa', 92], ['Bart', 59]];
@@ -87,10 +87,10 @@ console.log(nums);
 
 
 
-// ------> without/intersection
+// ------> without/difference
 // without() 返回一个删除所有values值后的 array副本。
 // difference() 类似于without，但返回的值来自array参数数组，并且不存在于other 数组。
-console.log('---------------------------without/intersection------------------------------');
+console.log('---------------------------without/difference------------------------------');
 
 nums = _.without([1, 2, 1, 0, 3, 1, 4], 0, 1);
 console.log(nums);

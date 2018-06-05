@@ -33,7 +33,7 @@ console.log(JSON.stringify(upperObj));
 // ------> reduce/reducRight
 // reduce 把一个函数作用在这个Array的每个元素上，reduce()把结果继续和序列的下一个元素做累积计算
 // reducRight 是从右侧开始组合元素的reduce函数
-console.log('---------------------------reduce/reducRight------------------------------');
+console.log('---------------------------reduce/reduceRight------------------------------');
 
 var sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
 console.log(sum);
